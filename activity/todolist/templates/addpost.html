@@ -1,0 +1,27 @@
+{%  extends 'base.html' %}
+
+{% block title %}
+   Home page
+{% endblock %}   
+
+{% block content %}
+
+ {% for item in dataset %}
+
+ <h1> Add Post </h1>
+
+ <div>
+     <form method="POST">
+ 
+         {% csrf_token %}
+         {{form.as_p}}
+         <button class="btn btn-secondary">POST</button>
+
+     </form>   
+     
+ </div>
+ {% endfor %}
+
+
+
+{% endblock %}

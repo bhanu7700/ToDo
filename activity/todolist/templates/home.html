@@ -1,0 +1,26 @@
+{%  extends 'base.html' %}
+
+{% block title %}
+   Home page
+{% endblock %}   
+
+{% block content %}
+
+ {% for item in dataset %}
+
+  <ul>
+
+  <b> {{ item.title }} </b> - {{ item.date }} <br>
+   {{item.content}}
+
+   <button class="btn btn-danger btn-sm">Delete</button>
+
+   <hr>
+
+  </ul>
+
+ {% endfor %}
+
+
+
+{% endblock %}
